@@ -1,0 +1,17 @@
+useDynLib(cslogistic)
+
+export(    
+       BayesCslogistic,
+       MleCslogistic
+)
+
+
+importFrom(graphics, plot)
+
+## register S3 methods
+## mcmc
+S3method(print, MleCslogistic)
+S3method(summary, MleCslogistic)
+S3method(print, BayesCslogistic)
+S3method(summary, BayesCslogistic)
+S3method(plot, BayesCslogistic)

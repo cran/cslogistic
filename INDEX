@@ -1,0 +1,4 @@
+MleCslogistic           Perform a maximum likelihood analysis of a conditionally specified logistic
+                        regression model
+BayesCslogistic         Perfrom a Bayesian analysis of a conditionally specified logistic
+                        regression model
