@@ -75,8 +75,9 @@ BayesCslogistic(formula, type = TRUE, intercept = TRUE,
 
 \references{
 
-Garcia-Zattera, M. J., Jara, A., Lesaffre, E. and Declerck, D. (2005). On conditional 
-    independence for multivariate binary data in caries research. In preparation.
+Garcia-Zattera, M. J., Jara, A., Lesaffre, E. and Declerck, D. (2007). Conditional 
+    independence of multivariate binary data with an application in caries research. 
+    Computational Statistics and Data Analysis, 51(6): 3223-3232.
 
 Joe, H. and Liu, Y. (1996). A model for multivariate response with covariates based on 
     compatible conditionally specified logistic regressions. Satistics & Probability Letters 
@@ -86,51 +87,50 @@ Joe, H. and Liu, Y. (1996). A model for multivariate response with covariates ba
 \examples{
 # simulated data set
 
-library(mvtnorm)
+  library(mvtnorm)
 
-n<-400
-mu1<-c(-1.5,-0.5)
-Sigma1<-matrix(c(1, -0.175,-0.175,1),ncol=2)
-age<-as.vector(sample(seq(5,6,0.1),n,replace=TRUE))
-beta1<-0.2
+  n <- 400
+  mu1 <- c(-1.5,-0.5)
+  Sigma1 <- matrix(c(1, -0.175,-0.175,1),ncol=2)
+  agev <- as.vector(sample(seq(5,6,0.1),n,replace=TRUE))
+  beta1 <- 0.2
 
-z<-rmvnorm(n,mu1,Sigma1)
-zz<-cbind(z[,1]+beta1*age,z[,2]+beta1*age)
-datos<-cbind(zz[,1]>0,zz[,2]>0,age)
-colnames(datos)<-c("y1","y2","age")
-data0<-data.frame(datos)
-attach(data0)
-
+  z <- rmvnorm(n,mu1,Sigma1)
+  zz <- cbind(z[,1]+beta1*agev,z[,2]+beta1*agev)
+  dat <- cbind(zz[,1]>0,zz[,2]>0,agev)
+  colnames(dat) <- c("y1","y2","age")
+  data0 <- data.frame(dat)
+  attach(data0)
 
 # equal effect of age for all the covariates
 
-y<-cbind(y1,y2)
+  y <- cbind(y1,y2)
 
-fit0<-BayesCslogistic(y~age)
-fit0
-summary(fit0)
-plot(fit0)
+  fit0 <- BayesCslogistic(y~age)
+  fit0
+  summary(fit0)
+  plot(fit0)
 
 # different effects: only intercept
 
-fit1<-BayesCslogistic(y~age,type=FALSE)
-fit1
-summary(fit1)
-plot(fit1)
+  fit1 <- BayesCslogistic(y~age,type=FALSE)
+  fit1
+  summary(fit1)
+  plot(fit1)
 
-# different effects: all the covariates
+# different effects: all the covariates 
 
-fit2<-BayesCslogistic(y~age,type=FALSE,intercept=FALSE)
-fit2
-summary(fit2)
-plot(fit2)
+  fit2 <- BayesCslogistic(y~age,type=FALSE,intercept=FALSE)
+  fit2
+  summary(fit2)
+  plot(fit2)
 
 }
 
 \author{
-Alejandro Jara Vallejos \email{Alejandro.JaraVallejos@med.kuleuven.be}
+Alejandro Jara \email{atjara@uc.cl}
 
-Maria Jose Garcia-Zattera \email{MariaJose.GarciaZattera@med.kuleuven.be}
+Maria Jose Garcia-Zattera \email{mjgarcia@uc.cl}
 }
 
 \keyword{regression}

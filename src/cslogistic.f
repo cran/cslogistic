@@ -7,21 +7,31 @@ c     specified logistic regression model for multivariate clustered
 c     binary data in a Frequentist and in a Bayesian way. 
 c     For the Bayesian analysis a multivariate normal prior is used.
 c     
-c     Alejandro Jara
-c     Biostatistical Centre
-c     Katholieke Universiteit Leuven
-c     Alejandro.JaraVallejos@med.kuleuven.be
+c      Alejandro Jara
+c      Department of Statistics
+c      Facultad de Matematicas
+c      Pontificia Universidad Catolica de Chile
+c      Casilla 306, Correo 22 
+c      Santiago
+c      Chile
+c      Voice: +56-2-3544506  URL  : http://www.mat.puc.cl/~ajara
+c      Fax  : +56-2-3547729  Email: atjara@uc.cl
 c
-c     Maria Jose Garcia-Zattera
-c     Biostatistical Centre
-c     Katholieke Universiteit Leuven
-c     MariaJose.GarciaZattera@med.kuleuven.be
-c 
+c      Alejandro Jara
+c      Department of Statistics
+c      Facultad de Matematicas
+c      Pontificia Universidad Catolica de Chile
+c      Casilla 306, Correo 22 
+c      Santiago
+c      Chile
+c      Voice: +56-2-3544506  URL  : http://www.mat.puc.cl/
+c      Fax  : +56-2-3547729  Email: mjgarcia@uc.cl
+
 c     This software is distributed under the terms of the GNU GENERAL
 c     PUBLIC LICENSE Version 2, June 1991.  See the package LICENSE
 c     file for more information.
 c
-c     Copyright (C) 2005 Alejandro Jara and Maria Jose Garcia-Zattera
+c     Copyright (C) 2005-2012 Alejandro Jara and Maria Jose Garcia-Zattera
 c=======================================================================                  
 c=======================================================================                  
 

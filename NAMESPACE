@@ -1,5 +1,7 @@
 useDynLib(cslogistic)
 
+import(mvtnorm)
+
 export(    
        BayesCslogistic,
        MleCslogistic
@@ -9,7 +11,6 @@ export(
 importFrom(graphics, plot)
 
 ## register S3 methods
-## mcmc
 S3method(print, MleCslogistic)
 S3method(summary, MleCslogistic)
 S3method(print, BayesCslogistic)

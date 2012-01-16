@@ -1,11 +1,19 @@
 
-.onAttach <- function(...) {
-     cat("##\n## Conditionally Specified Logistic Regression Model Package (cslogistic)\n")
-     cat("## Copyright (C) 2005, Alejandro Jara and Maria Jose Garcia-Zattera \n")
-     cat("##\n## Support provided by the Katholieke Universiteit Leuven \n")
-     cat("## (Research Grant OT / 00 / 35) \n##\n")
+
+.onAttach <- function(libname, pkgname) {
+    RFver <- read.dcf(file=system.file("DESCRIPTION", package=pkgname),
+                      fields="Version")
+	packageStartupMessage(" ")
+    packageStartupMessage(paste(pkgname, RFver))
+	packageStartupMessage(" ")
+    packageStartupMessage("Copyright (C) 2005 - 2012")
+	packageStartupMessage("Alejandro Jara and Maria Jose Garcia-Zattera")
+    packageStartupMessage("Department of Statistics")
+    packageStartupMessage("P.U. Catolica de Chile")
+    packageStartupMessage(" ")
 }
 
 .onUnload <- function(libpath) {
     library.dynam.unload("cslogistic", libpath)
 }
+

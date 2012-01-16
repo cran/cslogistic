@@ -1,0 +1,13 @@
+a1a00fb4d56e1222af2b138c4e4aba6b *DESCRIPTION
+f86445acfea4d0e36679c6634b7cbf5c *INDEX
+2c277bb5ecf5582d8e77ae9ddeee12c3 *LICENSE
+90f4bcd6487dba1430b21467f719ac17 *NAMESPACE
+a3b1bc093a80166d052b50567eede295 *R/BayesCslogistic.R
+ff2b5632963d902aa9a998cbed7ff17e *R/MleCslogistic.R
+c619a9111e4293fc5071cd85fdaa51f3 *R/cslogistic.R
+bc215bbfd24af5ff3ef052936c315269 *R/hidden.R
+bc331a426bb1f237fe8b796ba048bc1b *man/BayesCslogistic.Rd
+edd7ca169fd3a34015f73e2a8012a61e *man/MleCslogistic.Rd
+e08a73234678664255c50d57f1bb7a1f *man/cslogistic.Rd
+5be98ebff0b1b8155e715497e98649a3 *src/Makevars
+16f1c75584d5c078fc9c29a9240cfc6b *src/cslogistic.f
